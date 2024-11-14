@@ -20,3 +20,20 @@ const isEven= (num : number) : boolean | string  => {
     }
     return "Number is not odd";
 }
+
+
+
+
+// function findProduct(num1: number, num2:number): string | number {
+//     return num1 * num2;
+// }
+
+const findProduct = (num1: number, num2: number = 10): number => {
+    return num1*num2
+}
+
+const ans = findProduct(10);
+
+
+
+
