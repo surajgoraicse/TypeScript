@@ -1,0 +1,14 @@
+var data;
+data = ["Suraj", 234354, false];
+var x = data[0], y = data[1], z = data[2];
+console.log(x);
+console.log(y);
+console.log(z);
+var user;
+user = ["suraj", "gorai", 98374];
+var marks;
+marks = ["suraj", 34, 3, 43, 4, 3, 34324, 4, 5, 6, 65, 6];
+user[0] = "SurajGorai";
+data.push(false);
+data.push("hero");
+console.log(data);
