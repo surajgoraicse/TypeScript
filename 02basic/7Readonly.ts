@@ -11,8 +11,38 @@ let newUser: User = {
     name: "s",
     email: "s@s.com",
     isActive: false,
-    creditDetails: "dkfhdf"
-
+//    creditDetails : "kdhfdhf"  // optional
 }
 
-console.log(newUser);
+newUser.name = "suraj"
+// newUser._id = "jhdfjkdhf"
+
+
+type cardDate = {
+    cardDate: String
+}
+type cardDetails = {
+    cvv: number;
+    cardNumber: number; 
+}
+
+type creditCard = cardDate & cardDetails & { isActive: true };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export {}

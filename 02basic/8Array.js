@@ -1,0 +1,18 @@
+"use strict";
+// const superHero: string[] = [];
+// superHero.push("superman");
+// superHero.push("spiderman");
+Object.defineProperty(exports, "__esModule", { value: true });
+// const level: number[] = [1, 2, 3];
+// level.push(3, 345, 45, 4, 54, 523);
+var superHero = [];
+superHero.push("spiderman", "superman");
+superHero.push("choota bheem");
+var level = [2, 3, 23, 2, 32, 4, 4454, 345];
+level.pop();
+var colors = [[255, 255, 255]];
+var rgb = [[255, 255, 255]];
+var users = [{ name: "Suraj", email: "suraj@gorai.com", isActive: true }];
+console.log(users);
+var data = [21, 3, 23, "car", "bike"];
+var data2 = ["suraj", null, undefined];
