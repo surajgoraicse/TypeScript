@@ -43,7 +43,7 @@ console.log(response);
 
 
 function register({ name , age , email} : {name : string , age : number , email: string}):{name : string , age : number , email: string} {
-    return {}
+    return {name : string , age : number , email: string}
 }
 
 
