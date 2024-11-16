@@ -4,28 +4,33 @@ const second: any = document.querySelector("#sec");
 const startTimer: any = document.querySelector("#start");
 const stopTimer: any = document.querySelector("#stop");
 const resetTimer: any = document.querySelector("#reset");
+const laps: any = document.querySelector("#laps");
+const list: any = document.querySelector("#list");
 
 let secInterval: any, minInterval: any, hourInterval: any;
 let sec = 0;
 let min = 0;
 let hr = 0;
 let flag = false;
+let lapseCount = 1;
 
-function handleStop() {
+function handleStop(): void {
 	flag = false;
 	clearInterval(secInterval);
 	clearInterval(minInterval);
 	clearInterval(hourInterval);
 }
 
-function handleStart() {
+function handleStart(): void {
 	if (!flag) {
 		flag = true;
 		timer();
 	}
 }
 
-function handleReset() {
+function handleReset(): void  {
+	lapseCount = 1;
+	list.innerHTML = "";
 	sec = 0;
 	min = 0;
 	hr = 0;
@@ -35,7 +40,7 @@ function handleReset() {
 	handleStop();
 }
 
-function timer() {
+function timer(): void {
 	secInterval = setInterval(() => {
 		sec += 1;
 		if (sec == 60) sec = 0;
@@ -54,6 +59,18 @@ function timer() {
 	}, 1000 * 60 * 60);
 }
 
+
+function handleLaps(): void {
+	
+	const li = document.createElement("li");
+	const textNode = document.createTextNode("Laps " + (lapseCount) +   "  ➡️ " + hr + " : "+ min+ " : "+ sec);
+	li.appendChild(textNode);
+	list.appendChild(li)
+	lapseCount++;
+
+}
+
 stopTimer.addEventListener("click", handleStop);
 startTimer.addEventListener("click", handleStart);
 resetTimer.addEventListener("click", handleReset);
+laps.addEventListener("click", handleLaps);

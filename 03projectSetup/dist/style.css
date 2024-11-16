@@ -64,3 +64,23 @@ body {
 .btns button:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
+
+
+#list{
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+	border: solid white 1px;
+	width: 350px;
+	margin: 0 auto;
+	border-radius: 15px;
+
+}
+#list li{
+	display: block;
+	color: white;
+	list-style-type: none;
+	font-size: 30px;
+	margin: 5px 0px;
+
+}
