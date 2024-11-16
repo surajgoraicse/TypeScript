@@ -52,7 +52,28 @@ const newUser: User = {
     isLoggedIn: false
 }
 
+type Laptop = {
+    model: string;
+    brand: string;
+    manufacturing: Number;
+    processor: string;
+    isAvailable: boolean;
+}
+type LaptopPrice = {
+    model: string, // duplicate element
+    price : number
+}
 
+const customer1: Laptop & LaptopPrice = {
+    model: "hp32",
+    brand: "hp",
+    manufacturing: 2024,
+    processor: "i9",
+    isAvailable: true,
+    price: 100000
+} 
+
+console.log(customer1);
 
 
 
