@@ -1,2 +1,3 @@
 "use strict";
-const value = 34;
+class Instagram {
+}
