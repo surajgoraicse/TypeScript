@@ -82,5 +82,23 @@
 //   console.log(MathUtils.PI); // 3.14  
 //   console.log(MathUtils.circleArea(5)); // 78.5
 
+class User{
+      constructor(public username: string,public  email: string , protected platform = "windows") {
+      }
+      greet() {
+          console.log(`Hello ${this.username}`);
+      }
+}
+
+class Admin extends User{
+    isAdmin = true;
+    changePlatform() {
+        this.platform = "mac";
+    }
+}
 
 
+  const user1 = new User("suraj" , "suraj@google.com")
+  console.log(user1.email);
+  console.log(user1.username);
+//   console.log(user1.platform);
